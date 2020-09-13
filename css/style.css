@@ -4,56 +4,51 @@
 }
 .header-container {
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
 }
 header {
     background: url(../images/background_header_02.jpg) #555556 center center no-repeat;
     background-size: cover;
-    /*background: url(../images/background_header.jpg) #555556 center center no-repeat;
-    background-size: cover;
-    position: relative;*/
 }
-/*header::after {
-    content: '';
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-color: #555556;
-	opacity: 0.7;
-}*/
-/* Пыталась добавить прозрачный фон поверх фоновой картинки  (как в макете) не очень получилось. Оставила, хочу разоюраться с этим позже */
 
 .top-menu {
-    padding: 50px;
+    padding: 50px 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: auto;
+    margin: 0 auto;
 }
 .menu-list {
     list-style: none;
+    padding: 1em 0 0 3em;
+    flex-basis: 60%;
+    text-align: right;
 }
 .menu-items {
     display: inline;
+    padding-right: 1em;
 }
 .items-link {
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
     font-size: 0.7em;
-    text-decoration: none; 
+    text-decoration: none;
+    transition-duration: 0.5s; 
 }
 .items-link:hover {
     color: #c7b299;
 }
+.menu-icons {
+    padding: 1em 0 0 0;
+}
 .menu-search, .menu-cart{
     background: none;
     border: none;
-    padding: 0;
+    padding: 0 1em 0 0;
     height: 24px;
     fill: #fff;
+    transition-duration: 0.5s;
 }
 .menu-search:hover {
     fill:#c7b299;
@@ -67,11 +62,23 @@ header {
     border: none;
     opacity: 0.5;
     fill:#fff;
+    transition-duration: 0.5s;
 }
-.control-pag:hover {
+.slider-control-bottom {
+    margin: 0 auto;
+    text-align: center;
+    padding: 2em 0;
+}
+.control-pag {
+    padding: 0 0.5em 0 0;
+}
+.control-pag:focus {
     fill: none;
     stroke: #d3c1ad;
     stroke-width: 2px;
+    outline: none;
+    transform: scale(1.1);
+    
 }
 .control-left:hover {
     fill: #d3c1ad;
@@ -79,10 +86,116 @@ header {
 .control-right:hover {
     fill: #d3c1ad;
 }
-.about-design, .about-dev, .about-custom, .about-marketing {
-    fill: #555555;
-}
+
 .numbers-icon {
     fill: #c7b299;
 }
+.slider-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: 0 auto;
+    color:#fff;
+    padding: 15em 0;
+}
+.title-top {
+    font-family:'Raleway', sans-serif;
+    font-size: 3em;
+    font-weight: 800;
+    
+}
+.subtitle-top {
+    font-family:'Raleway', sans-serif;
+    font-size: 1.6em;
+    font-weight: 500;
+}
+.text-top {
+    padding: 1em 3em 3em 3em;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 200;
+}
+.btn-top {
+    display:block;
+    margin: 0 auto;
+    max-width: 200px;
+    text-decoration: none;
+    padding: 1em 2em;
+    color: #fff;
+    background: #998675;
+    border-bottom: 4px #736357 solid;
+    border-radius: 5px;
+    font-family:'Raleway', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition-duration: 0.5s;
+    
+}
+.btn-top:hover {
+    background: #736357;
+    transform: scale(1.2);
+}
+
+.slider-top {
+    text-align: center;
+    max-width: 600px;
+}
+.about {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 80px 0;
+}
+
+.about-items {
+    margin: 0 auto;
+    flex-basis: 20%;
+    text-align: center;
+    
+
+}
+.about-items::after {
+    content:'';
+    display: block;
+    background: #f1eee9;
+    height: 3px;
+    width: 70px;
+    margin: 0 auto;
+    transition-duration: 0.5s;
+}
+.about-items:hover::after{
+    background:#c7b299;
+    transform: scaleX(0.5);
+}
+.about-icon {
+    fill: #555555;
+    transition-duration: 0.5s;
+}
+.about-items:hover .about-icon {
+    fill: #c7b299;
+    transform: scale(1.2);
+}
+.about-items:hover .about-title {
+    color: #c7b299;
+    transition: 0.5s;
+}
+
+.about-title {
+    color: #555555;
+    font-family:'Raleway', sans-serif;
+    font-weight: 700;
+    padding: 1em 0 0 0;
+    transition-duration: 0.5s;
+}
+.about-text {
+    color: #8c8c8c;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    padding: 1em 0;
+}
+
+
 
